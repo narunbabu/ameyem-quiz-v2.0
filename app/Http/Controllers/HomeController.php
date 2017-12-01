@@ -9,6 +9,11 @@ use AmeyemQuiz\Test;
 use AmeyemQuiz\User;
 use Illuminate\Http\Request;
 
+
+
+// use Illuminate\Routing\Controller;
+use Illuminate\Contracts\Auth\Authenticatable;
+
 class HomeController extends Controller
 {
     /**
@@ -26,12 +31,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Authenticatable $user)
     {
         $questions = Question::count();
         $users = User::whereNull('role_id')->count();
+        $current_user=$user['name'];
         $quizzes = Test::count();
         $average = Test::avg('result');
-        return view('home', compact('questions', 'users', 'quizzes', 'average'));
+        return view('home', compact('questions', 'users', 'quizzes', 'average','current_user'));
     }
 }
+
+
