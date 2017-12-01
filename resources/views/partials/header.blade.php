@@ -17,7 +17,7 @@
 
         <div class="top-menu">
             <ul class="nav navbar-nav pull-right">
-               <li> <h1>{{$current_user}}'s dashboard</h1></li>
+               <li> <h1>{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}'s dashboard</h1></li>
             </ul>
         </div>
     </div>

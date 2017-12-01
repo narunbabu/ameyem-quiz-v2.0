@@ -35,10 +35,10 @@ class HomeController extends Controller
     {
         $questions = Question::count();
         $users = User::whereNull('role_id')->count();
-        $current_user=$user['name'];
+        // $current_user=$user['name'];
         $quizzes = Test::count();
         $average = Test::avg('result');
-        return view('home', compact('questions', 'users', 'quizzes', 'average','current_user'));
+        return view('home', compact('questions', 'users', 'quizzes', 'average'));
     }
 }
 
