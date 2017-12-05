@@ -17,6 +17,7 @@
                 <thead>
                     <tr>
                         <th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
+                        <th>@lang('quickadmin.topics.fields.subject')</th>
                         <th>@lang('quickadmin.topics.fields.title')</th>
                         <th>&nbsp;</th>
                     </tr>
@@ -27,6 +28,7 @@
                         @foreach ($topics as $topic)
                             <tr data-entry-id="{{ $topic->id }}">
                                 <td></td>
+                                <td>{{ $topic->subject}}</td>
                                 <td>{{ $topic->title }}</td>
                                 <td>
                                     <a href="{{ route('topics.show',[$topic->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>

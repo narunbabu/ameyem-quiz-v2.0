@@ -7,6 +7,7 @@ use AmeyemQuiz\Question;
 use AmeyemQuiz\Result;
 use AmeyemQuiz\Test;
 use AmeyemQuiz\User;
+use AmeyemQuiz\Topic;
 use Illuminate\Http\Request;
 
 
@@ -36,9 +37,20 @@ class HomeController extends Controller
         $questions = Question::count();
         $users = User::whereNull('role_id')->count();
         // $current_user=$user['name'];
+        $topics=Topic::all();
+        
+            
+            $subjects = array();
+
+            foreach ($topics as $topic) {
+                
+                array_push ($subjects, $topic['subject']);
+            }
+            $subjects= array_unique($subjects);
+        // $subjects=$topics['subject'];
         $quizzes = Test::count();
         $average = Test::avg('result');
-        return view('home', compact('questions', 'users', 'quizzes', 'average'));
+        return view('home', compact('questions', 'users', 'quizzes', 'average','topics','subjects'));
     }
 }
 

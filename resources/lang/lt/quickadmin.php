@@ -53,7 +53,9 @@ return [
 	
 	'topics' => [
 		'title' => 'Topics',
+		
 		'fields' => [
+			'subject' => 'Subject',
 			'title' => 'Title',
 		],
 	],

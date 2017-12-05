@@ -29,7 +29,12 @@ $this->post('password/reset', 'Auth\ResetPasswordController@reset')->name('auth.
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index');
+    
+    // Route::get('/tests/{id}',function($id){
+    //     return $id;
+    // });
     Route::resource('tests', 'TestsController');
+    // Route::resource('tests/quiz', 'TestsController@quiz');
     Route::resource('roles', 'RolesController');
     Route::post('roles_mass_destroy', ['uses' => 'RolesController@massDestroy', 'as' => 'roles.mass_destroy']);
     Route::resource('users', 'UsersController');

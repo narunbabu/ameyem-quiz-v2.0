@@ -17,6 +17,7 @@
       href="{{ url('quickadmin/css') }}/font-awesome.min.css"/>
 <link rel="stylesheet"
       href="{{ url('quickadmin/css') }}/bootstrap.min.css"/>
+       {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  --}}
 <link rel="stylesheet"
       href="{{ url('quickadmin/css') }}/components.css"/>
 <link rel="stylesheet"
@@ -33,6 +34,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.css"/>
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css"/>
+<link rel="stylesheet"
+      href="{{ url('quickadmin/css') }}/cards.css"/>
 
 <meta property="og:title" content="AmeyemQuiz - how well do you know Computer/Web languages?" />
 <meta property="og:image" content="{{ asset('laraquiz.png') }}" />

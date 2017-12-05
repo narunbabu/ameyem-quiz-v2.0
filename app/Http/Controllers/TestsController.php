@@ -19,11 +19,18 @@ class TestsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // $topics = Topic::inRandomOrder()->limit(10)->get();
+        
+        // $topics = Topic::inRandomOrder()->limit(10)->get();fdsa  
+        $id = $request->input('id');
+        // $name= $request->url();
+        // $questions = Question::inRandomOrder()->limit(10)->get();
+        // foreach ($questions as &$question) {
+        //     $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
+        // }
 
-        $questions = Question::inRandomOrder()->limit(10)->get();
+        $questions = Question::where('topic_id', $id)->inRandomOrder()->limit(10)->get();
         foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
         }
@@ -37,9 +44,15 @@ class TestsController extends Controller
             }
         }
         */
-
+        // return "hello";
         return view('tests.create', compact('questions'));
+        // $topics=Topic::all();
+        // return $name;
+        // return view('tests.index', compact('topics'));
+
+        // return view('tests.index', compact('questions'));
     }
+
 
     /**
      * Store a newly solved Test in storage with results.
