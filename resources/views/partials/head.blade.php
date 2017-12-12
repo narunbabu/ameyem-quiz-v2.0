@@ -36,7 +36,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css"/>
 <link rel="stylesheet"
       href="{{ url('quickadmin/css') }}/cards.css"/>
-
-<meta property="og:title" content="AmeyemQuiz - how well do you know Computer/Web languages?" />
+<!--
+<meta property="og:title" content="AmeyemQuiz - how well do you know your subject? Test yourself" />
 <meta property="og:image" content="{{ asset('laraquiz.png') }}" />
-<meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com and modified by ameyem.com " />
+<meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com" />
+-->
+
