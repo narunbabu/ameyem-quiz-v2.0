@@ -94,11 +94,11 @@ class TestsController extends Controller
 
         $test2 = Test::find($test->id);
         $mydate = date_format($test2->created_at, 'd-M-Y H:i');
-        // $urls=Share::load('http://www.skills.ameyem.com/quiz', 'Wonna test your capabilities too!!!?',
-        // url('http://www.skills.ameyem.com/quiz/quickadmin/images/logo.png'))->services('facebook', 'gplus', 'twitter');
+        $urls=Share::load('http://www.skills.ameyem.com/quiz', 'Wonna test your capabilities too!!!?',
+        url('http://www.skills.ameyem.com/quiz/quickadmin/images/logo.png'))->services('facebook', 'gplus', 'twitter');
 
-        $urls=Share::load('http://localhost:8000/quiz', 'Wonna test your capabilities too!!!?',
-        url('http://localhost:8000/quiz/quickadmin/images/logo.png'))->services('facebook', 'gplus', 'twitter');
+        // $urls=Share::load('http://localhost:8000/quiz', 'Wonna test your capabilities too!!!?',
+        // url('http://localhost:8000/quiz/quickadmin/images/logo.png'))->services('facebook', 'gplus', 'twitter');
         // return redirect()->route('results.show', [$test->id]);
         // return redirect()->route('results.summary', [$test->id]);
         
