@@ -38,7 +38,16 @@
       href="{{ url('quickadmin/css') }}/cards.css"/>
 
 <meta property="og:title" content="AmeyemQuiz - how well do you know your subject? Test yourself" />
-<meta property="og:image" content="{{ asset('laraquiz.png') }}" />
+{{--  <meta property="og:image" content="{{ asset('laraquiz.png') }}" />  --}}
+<meta property="og:image" content="http://www.skills.ameyem.com/quiz/quickadmin/serverside/images/5a2f7a0aa09e6.png" />
+
 <meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com" />
+
+<meta name="twitter:card" content="Quiz Result" />
+<meta name="twitter:site" content="@nalamara" />
+<meta name="twitter:title" content="AmeyemQuiz" />
+<meta name="twitter:description" content="How well do you know your subject? Test yourself" />
+<meta name="twitter:image" content="http://www.skills.ameyem.com/quiz/quickadmin/serverside/images/5a2f7a0aa09e6.png" />
+<meta name="twitter:url" content="http://www.skills.ameyem.com/quiz" />
 <!-- -->
 

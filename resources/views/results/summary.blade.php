@@ -1,11 +1,6 @@
 @extends('layouts.app')
 <head>
-<meta name="twitter:card" content="photo" />
-<meta name="twitter:site" content="@example" />
-<meta name="twitter:title" content="My picture" />
-<meta name="twitter:description" content="A description" />
-<meta name="twitter:image" content="http://example.com/test.jpg" />
-<meta name="twitter:url" content="http://example.com/mypage.html" />
+
 </head>
 @section('content')
 <h3 class="page-title">@lang('quickadmin.results.title')</h3>
