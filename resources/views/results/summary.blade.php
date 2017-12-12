@@ -1,7 +1,5 @@
 @extends('layouts.app')
-<head>
 
-</head>
 @section('content')
 <h3 class="page-title">@lang('quickadmin.results.title')</h3>
 <h1>Welcome to summary</h1>
@@ -49,7 +47,10 @@
  <script type="text/javascript" src="{{ url('quickadmin/js') }}/html2canvas.js"></script>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
  {{--  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>  --}}
+
 <script>
+var savefid='';
+var fileuid = "<?php echo $fileuid; ?>";
     html2canvas($("#widget"), {
         onrendered: function(canvas) {
              var dataURL = canvas.toDataURL();
@@ -58,11 +59,14 @@
                                     type: "POST",
                                     url: "{{ url('quickadmin/serverside') }}/script.php",
                                     data: { 
-                                       imgBase64: dataURL
+                                       imgBase64: dataURL,fileuid:fileuid
                                     }
                                   }).done(function(o) {
-                                    //console.log('saved'); 
-                                    // If you want the file to be visible in the browser 
+                                    console.log(o); 
+                                    savefid=o;
+                                   // window.location.href = "myphpfile.php?name=" + javascriptVariable; 
+                                   // <?php $abc = "<script>document.write(savefid)</script>";?>   
+                                    // If you want the file to be visible in the browser  , fileuid: fileuid
                                     // - please modify the callback in javascript. All you
                                     // need is to return the url to the file, you just saved 
                                     // and than put the image in your browser.
@@ -72,11 +76,14 @@
                 });
 </script>
 <div>
-<?php $turl=$urls['twitter'];
+<?php 
+echo  'php_'.$abc;
+$myid= "hi";
+$turl=$urls['twitter'];
 $furl=$urls['facebook'];
 
 ?>
-
+<h1>{{$fileuid}}</h1>
 <a href=  "{{$turl}}"
     target="_blank">
     Share on twitter
