@@ -11,20 +11,20 @@
 	print $success ? $file : 'Unable to save the file.';
 
 	//define('HTML_DIR', '../../u/');
-	define('HTML_DIR', 'http://www.skills.ameyem.com/quiz/u/');
+	define('HTML_DIR', 'http://skills.ameyem.com/quiz/u/');
 	$htmlFile = HTML_DIR . $fileuid . '.html';; // or .php   
 	$fh = fopen($htmlFile, 'w'); // or die("error");  
 	$stringData = '
 	<html>
 	<head>
 		<meta property="og:title" content="AmeyemQuiz - how well do you know your subject? Test yourself" />
-		<meta property="og:image" content="http://www.skills.ameyem.com/quiz/quickadmin/serverside/'.$file.'" />
+		<meta property="og:image" content="http://skills.ameyem.com/quiz/quickadmin/serverside/'.$file.'" />
 		<meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com" />
-		<meta property="og:url" content="http://www.skills.ameyem.com/quiz/u/'.$fileuid.'.html" />
+		<meta property="og:url" content="http://skills.ameyem.com/quiz/u/'.$fileuid.'.html" />
 	</head>
 	<body>
 	<img src="../quickadmin/serverside/'.$file.'">
-	<a href="http://www.skills.ameyem.com/quiz">Take me to quiz</a>
+	<a href="http://skills.ameyem.com/quiz">Take me to quiz</a>
 	  <h1>Hello your File</h1>
 	  </body>
  	 </html>
