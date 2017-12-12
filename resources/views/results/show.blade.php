@@ -2,6 +2,18 @@
 
 @section('content')
     <h3 class="page-title">@lang('quickadmin.results.title')</h3>
+    
+   
+    
+    <?php $message = "wrong answer"; 
+    $name = $test->user->name;
+    //{{ $test->result }}/10
+    echo "<script type='text/javascript'>alert('$name');
+    </script>";
+    ?>
+     {{--  <script>
+    alert("$message")
+    </script>  --}}
 
     <div class="panel panel-default">
         <div class="panel-heading">

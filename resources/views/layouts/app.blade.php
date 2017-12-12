@@ -94,103 +94,14 @@
 .funkyradio input[type="checkbox"]:focus ~ label:before {
   box-shadow: 0 0 0 3px #999;
 }
-/*
-.funkyradio-default input[type="radio"]:checked ~ label:before,
-.funkyradio-default input[type="checkbox"]:checked ~ label:before {
-  color: #333;
-  background-color: #ccc;
-}
-
-.funkyradio-primary input[type="radio"]:checked ~ label:before,
-.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #337ab7;
-}
-*/
 
 .funkyradio-success input[type="radio"]:checked ~ label:before,
 .funkyradio-success input[type="checkbox"]:checked ~ label:before {
   color: #fff;
   background-color: #5cb85c;
 }
-/*
-.funkyradio-danger input[type="radio"]:checked ~ label:before,
-.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #d9534f;
-}
-
-.funkyradio-warning input[type="radio"]:checked ~ label:before,
-.funkyradio-warning input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #f0ad4e;
-}
-
-.funkyradio-info input[type="radio"]:checked ~ label:before,
-.funkyradio-info input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #5bc0de;
-}
-*/
 
 
-/*
-     label.btn span {
-        font-size: 1.2em ;
-        }
-
-        label input[type="radio"] ~ i.fa.fa-circle-o{
-            color: #c8c8c8;    display: inline;
-        }
-        label input[type="radio"] ~ i.fa.fa-dot-circle-o{
-            display: none;
-        }
-        label input[type="radio"]:checked ~ i.fa.fa-circle-o{
-            display: none;
-        }
-        label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
-            color: #7AA3CC;    display: inline;
-        }
-        label:hover input[type="radio"] ~ i.fa {
-        color: #7AA3CC;
-        }
-
-        div[data-toggle="buttons"] label.active{
-            color: #7AA3CC;
-        }
-
-        div[data-toggle="buttons"] label {
-        display: inline-block;
-        padding: 6px 12px;
-        margin-bottom: 0;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 2em;
-        text-align: left;
-        white-space: nowrap;
-        vertical-align: top;
-        cursor: pointer;
-        background-color: none;
-        border: 0px solid 
-        #c8c8c8;
-        border-radius: 3px;
-        color: #c8c8c8;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-        }
-
-        div[data-toggle="buttons"] label:hover {
-        color: #7AA3CC;
-        }
-
-        div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        }
-        */
 
 </style>
 </head>

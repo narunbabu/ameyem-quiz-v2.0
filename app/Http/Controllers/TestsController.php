@@ -29,12 +29,12 @@ class TestsController extends Controller
         // foreach ($questions as &$question) {
         //     $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
         // }
-
+        $topic=Topic::find($id);
         $questions = Question::where('topic_id', $id)->inRandomOrder()->limit(10)->get();
         foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
         }
-
+        $t_id=$id;
         /*
         foreach ($topics as $topic) {
             if ($topic->questions->count()) {
@@ -45,7 +45,7 @@ class TestsController extends Controller
         }
         */
         // return "hello";
-        return view('tests.create', compact('questions'));
+        return view('tests.create', compact('questions','topic'));
         // $topics=Topic::all();
         // return $name;
         // return view('tests.index', compact('topics'));
@@ -63,9 +63,10 @@ class TestsController extends Controller
     public function store(Request $request)
     {
         $result = 0;
-
+        $topic_id=$request->input('topic_id');
         $test = Test::create([
             'user_id' => Auth::id(),
+            'topic_id'=> $topic_id,
             'result'  => $result,
         ]);
 
@@ -89,6 +90,10 @@ class TestsController extends Controller
 
         $test->update(['result' => $result]);
 
-        return redirect()->route('results.show', [$test->id]);
+        $test2 = Test::find($test->id);
+        $mydate = date_format($test2->created_at, 'd-M-Y H:i');
+        // return redirect()->route('results.show', [$test->id]);
+        // return redirect()->route('results.summary', [$test->id]);
+        return view('results.summary', compact('test2','mydate'));
     }
 }

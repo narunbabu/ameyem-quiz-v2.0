@@ -42,7 +42,7 @@
                     {{--  <div class="form-group">  --}}
                         <div class="form-group col-lg-3 col-md-6 text-center">           
                             {{--  <div class="jumbotron">  --}}
-                            <div class="card card-inverse" style="background-color: #cdf; border-color: #333;height:400px">
+                            <div class="card card-inverse" style="background-color: #cdf; border-color: #333;height:300px">
                                 <div class="card-header">
                                     AmeyemQuiz
                                 </div>

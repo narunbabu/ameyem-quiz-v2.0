@@ -13,7 +13,7 @@ class ResultsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except('index', 'show');
+        $this->middleware('admin')->except('index', 'show','summary');
     }
 
     /**
@@ -38,6 +38,23 @@ class ResultsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function summary($id)
+    {
+        $test = Test::find($id)->load('user');
+
+        if ($test) {
+            $results = TestAnswer::where('test_id', $id)
+                ->with('question')
+                ->with('question.options')
+                ->get()
+            ;
+        }
+
+        // return view('results.show', compact('test', 'results'));
+        return 'good';
+        //view('results.summary', compact('test', 'results'));
+    }
+
     public function show($id)
     {
         $test = Test::find($id)->load('user');
@@ -51,5 +68,6 @@ class ResultsController extends Controller
         }
 
         return view('results.show', compact('test', 'results'));
+        // return view('results.summary', compact('test', 'results'));
     }
 }
