@@ -59,9 +59,9 @@ $gurl=$urls['gplus'];
             <div>
                 
                 {{--  {{$turl}}  --}}
-                <a href=  "{{$turl}}" onclick="return hola();"> <i class="fa fa-twitter-square fa_custom fa-4x" style="font-size:48px;color:#0084b4"></i></a>
-                <a href=  "{{$furl}}" onclick="return hola();"> <i class="fa fa-facebook-square fa_custom fa-4x" style="font-size:48px;color:#3b5998"></i></a>
-                <a href="{{$gurl}}" onclick="return hola();"><i class="fa fa-google-plus-square fa_custom fa-4x" style="font-size:48px;color:#d34836"></i></a>
+                <a target="_blank" href=  "{{$turl}}" onclick="return hola();"> <i class="fa fa-twitter-square fa_custom fa-4x" style="font-size:48px;color:#0084b4"></i></a>
+                <a target="_blank" href=  "{{$furl}}" onclick="return hola();"> <i class="fa fa-facebook-square fa_custom fa-4x" style="font-size:48px;color:#3b5998"></i></a>
+                <a target="_blank" href="{{$gurl}}" onclick="return hola();"><i class="fa fa-google-plus-square fa_custom fa-4x" style="font-size:48px;color:#d34836"></i></a>
                 
                 <div id="cont1" class="list-group" style="display:none">
                 <a href="{{ route('results.show', [$test2->id])}}" class="list-group-item">Detailed Result</a>
