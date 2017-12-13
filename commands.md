@@ -28,6 +28,7 @@ in database/seeds/UserSeed.php
 chmod -R o+w storage
 /opt/cpanel/ea-php70/root/usr/bin/php artisan config:cache
 /opt/cpanel/ea-php70/root/usr/bin/php artisan route:cache
+/opt/cpanel/ea-php70/root/usr/bin/php artisan env
 
 curl -sS https://getcomposer.org/installer | /opt/cpanel/ea-php70/root/usr/bin/php
 /opt/cpanel/ea-php70/root/usr/bin/php composer.phar install
