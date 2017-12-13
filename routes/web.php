@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Route::get('/tests/{id}',function($id){
     //     return $id;
     // });
+    Route::resource('quiz', 'HomeController@index');
     Route::resource('tests', 'TestsController');
     // Route::resource('tests/quiz', 'TestsController@quiz');
     Route::resource('roles', 'RolesController');
