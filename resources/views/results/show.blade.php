@@ -8,8 +8,7 @@
     <?php $message = "wrong answer"; 
     $name = $test->user->name;
     //{{ $test->result }}/10
-    echo "<script type='text/javascript'>alert('$name');
-    </script>";
+   // echo "<script type='text/javascript'>alert('$name');    </script>";
     ?>
      {{--  <script>
     alert("$message")
@@ -86,7 +85,7 @@
 
             <p>&nbsp;</p>
 
-            <a href="{{ route('tests.index') }}" class="btn btn-default">Take another quiz</a>
+            <a href="/" class="btn btn-default">Take another quiz</a>
             <a href="{{ route('results.index') }}" class="btn btn-default">See all my results</a>
         </div>
     </div>
