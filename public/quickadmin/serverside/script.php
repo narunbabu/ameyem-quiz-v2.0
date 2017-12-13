@@ -13,21 +13,21 @@
 	//define('HTML_DIR', '../../u/');
 	define('HTML_DIR', '../../u/');
 	$htmlFile = HTML_DIR . $fileuid . '.html';; // or .php   
-	$fh = fopen($htmlFile, 'w'); // or die("error");  
+	$fh = fopen($htmlFile, 'w'); // or die("error");  /u/'.$fileuid.'.html
 	$stringData = '
 	<html>
 	<head>
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@myameyem" />
 		<meta name="twitter:creator" content="@myameyem" />
-		<meta name="twitter:url" content="http://skills.ameyem.com/quiz/u/'.$fileuid.'.html">
-		<meta name="twitter:title" content="AmeyemQuiz - how well do you know your subject? Test yourself">
-		<meta name="twitter:description" content="Ameyem Quiz. Powered by skills.ameyem.com/quiz This is a way to test your skills time to time and keep the records in an intelligent manner">
+		<meta name="twitter:url" content="http://skills.ameyem.com/quiz">
+		<meta name="twitter:title" content="AmeyemQuiz - How well do you know your subject? Test yourself">
+		<meta name="twitter:description" content="Ameyem Quiz. Powered by skills.ameyem.com/quiz This is a way to test & improve your skills time to time and keep the records in an intelligent manner">
 		<meta name="twitter:image" content="http://skills.ameyem.com/quiz/quickadmin/serverside/images/'.$fileuid.'.png">
 
 		<meta property="og:title" content="AmeyemQuiz - how well do you know your subject? Test yourself" />
 		<meta property="og:image" content="http://skills.ameyem.com/quiz/quickadmin/serverside/images/'.$fileuid.'.png" />
-		<meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com/quiz This is a way to test your skills time to time and keep the records in an intelligent manner" />
+		<meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com/quiz This is a way to test & improve your skills time to time and keep the records in an intelligent manner" />
 		<meta property="og:url" content="http://skills.ameyem.com/quiz/u/'.$fileuid.'.html" />
 	</head>
 	<body>
