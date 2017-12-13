@@ -32,6 +32,7 @@
   border-radius: 3px;
   border: 1px solid #D1D3D4;
   font-weight: normal;
+  padding-left:10px;
 }
 
 .funkyradio input[type="radio"]:empty,

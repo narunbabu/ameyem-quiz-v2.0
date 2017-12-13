@@ -45,7 +45,7 @@
                                             <div class="funkyradio-success">
                                                 <input type="radio" name="answers[{{ $question->id }}]"
                                                 value="{{ $option->id }}" id="{{ $option->id }}" />
-                                                <label for="{{ $option->id }}"> {{ $option->option }}</label>
+                                                <label for="{{ $option->id }}" style="padding-left:40px;"> {{ $option->option }}</label>
                                             </div>
                                             </div>
 
