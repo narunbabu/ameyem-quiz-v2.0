@@ -17,7 +17,7 @@
 	$stringData = '
 	<html>
 	<head>
-		<meta name="twitter:card" content="AmeyemQuiz" />
+		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@myameyem" />
 		<meta name="twitter:creator" content="@myameyem" />
 		<meta name="twitter:url" content="http://skills.ameyem.com/quiz/u/'.$fileuid.'.html">
