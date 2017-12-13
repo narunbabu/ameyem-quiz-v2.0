@@ -24,35 +24,17 @@ class TestsController extends Controller
         
         // $topics = Topic::inRandomOrder()->limit(10)->get();fdsa  
         $id = $request->input('id');
-        // $name= $request->url();
-        // $questions = Question::inRandomOrder()->limit(10)->get();
-        // foreach ($questions as &$question) {
-        //     $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
-        // }
+
         $topic=Topic::find($id);
         $questions = Question::where('topic_id', $id)->inRandomOrder()->limit(10)->get();
         foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
         }
         $t_id=$id;
-        /*
-        foreach ($topics as $topic) {
-            if ($topic->questions->count()) {
-                $questions[$topic->id]['topic'] = $topic->title;
-                $questions[$topic->id]['questions'] = $topic->questions()->inRandomOrder()->first()->load('options')->toArray();
-                shuffle($questions[$topic->id]['questions']['options']);
-            }
-        }
-        */
-        // return "hello";
-        
+      
         
         return view('tests.create', compact('questions','topic'));
-        // $topics=Topic::all();
-        // return $name;
-        // return view('tests.index', compact('topics'));
 
-        // return view('tests.index', compact('questions'));
     }
 
 
@@ -95,7 +77,7 @@ class TestsController extends Controller
         $test2 = Test::find($test->id);
         $mydate = date_format($test2->created_at, 'd-M-Y H:i');
         $fileuid=uniqid();
-        $urls=Share::load('http://www.skills.ameyem.com/quiz/u/'.$fileuid.'.html', 'Wanna test your capabilities too!!!?',
+        $urls=Share::load('http://www.skills.ameyem.com/quiz/u/'.$fileuid.'.html', 'I took a quiz to test my capabilities. AmeyemQuiz is awesome!!! Wanna test your capabilities too!!!? Register at skills.ameyem.com and follow @myameyem',
         url('http://www.skills.ameyem.com/quiz/quickadmin/serverside/images/'.$fileuid.'.png'))->services('facebook', 'gplus', 'twitter');
         
         // $urls=Share::load('http://localhost:8000/quiz', 'Wonna test your capabilities too!!!?',

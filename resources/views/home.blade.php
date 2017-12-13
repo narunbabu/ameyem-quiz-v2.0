@@ -49,18 +49,7 @@
                                 <div class="card-block">
                                     <h3 class="card-title"><strong>{{ $subject}}</strong></h3>
                                 
-                                        {{--  <h3 class="card-title"><strong>{{ $subject}}</strong></h3>  --}}
-                                            
-                                            {{--  <div class="d-flex  flex-column">
 
-                                                @foreach ($topics as $topic)
-                                                <p class="lead">
-                                                    @if ($topic->subject==$subject)
-                                                        <a href="{{ route('tests.index',['id'=>$topic->id]) }}" class="btn btn-primary btn-lg">{{ $topic->title}}</a>
-                                                    @endif
-                                                </p>
-                                                @endforeach   
-                                            </div>   --}}
                                             <div class="list-group list-group-flush">
                                                 @foreach ($topics as $topic)
                                                 
@@ -77,9 +66,7 @@
 
 
                                 </div>
-                                {{--  <div class="card-footer">
-                                    Email: quiz@ameyem.com
-                                </div>  --}}
+
                             </div>{{-- Card div end--}}
                         </div>
                     @endforeach

@@ -50,3 +50,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('results/summary', 'ResultsController@summary');
     Route::post('results_mass_destroy', ['uses' => 'ResultsController@massDestroy', 'as' => 'results.mass_destroy']);
 });
+
+Route::any('{query}',
+function() { return redirect('/home'); })
+->where('query', '.*');
