@@ -33,7 +33,7 @@ $gurl=$urls['gplus'];
             <div class="card-block">
                 <div class="row">
                     <div class='col-xs-7'>
-                    <h1>Weldone <strong>{{ $test2->user->name or 'My Guest!!' }}!!</strong> and <br><strong> congratulations!!! </strong>on completing your quiz.</h1>
+                    <h1>Well-done <strong>{{ $test2->user->name or 'My Guest!!' }}!!</strong> and <br><strong> congratulations!!! </strong>on completing your quiz.</h1>
                     <h3><strong>Date:</strong> {{  $mydate or '' }}
                     </div>
 

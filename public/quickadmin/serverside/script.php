@@ -25,7 +25,7 @@
 		<meta name="twitter:description" content="Ameyem Quiz. Powered by skills.ameyem.com/quiz This is a way to test & improve your skills time to time and keep the records in an intelligent manner">
 		<meta name="twitter:image" content="http://skills.ameyem.com/quiz/quickadmin/serverside/images/'.$fileuid.'.png">
 
-		<meta property="og:title" content="AmeyemQuiz - how well do you know your subject? Test yourself" />
+		<meta property="og:title" content="AmeyemQuiz - How well do you know your subject? Test yourself" />
 		<meta property="og:image" content="http://skills.ameyem.com/quiz/quickadmin/serverside/images/'.$fileuid.'.png" />
 		<meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com/quiz This is a way to test & improve your skills time to time and keep the records in an intelligent manner" />
 		<meta property="og:url" content="http://skills.ameyem.com/quiz/u/'.$fileuid.'.html" />

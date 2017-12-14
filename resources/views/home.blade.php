@@ -10,8 +10,9 @@
         <div class="col-md-10">
         {{--  <div class="col-6">  --}}
             <div class="panel panel-default">
-                <div class="panel-heading"><b>Welcome! Here are some numbers about AmeyemQuiz.</b></div>
-
+                <div class="panel-heading"><b>Welcome! Here are some numbers about AmeyemQuiz.</b><?php echo "  Now: " . date("h:i:sa"); ?></div>
+                
+                
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-3 text-center">
