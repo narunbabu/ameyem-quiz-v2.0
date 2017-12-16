@@ -29,11 +29,10 @@
 		<meta property="og:image" content="http://skills.ameyem.com/quiz/quickadmin/serverside/images/'.$fileuid.'.png" />
 		<meta property="og:description" content="Ameyem Quiz. Powered by skills.ameyem.com/quiz This is a way to test & improve your skills time to time and keep the records in an intelligent manner" />
 		<meta property="og:url" content="http://skills.ameyem.com/quiz/u/'.$fileuid.'.html" />
+		<meta http-equiv="refresh" content="0; url=http://skills.ameyem.com/quiz" />
 	</head>
 	<body>
 	<img src="../quickadmin/serverside/'.$file.'">
-	<a href="http://skills.ameyem.com/quiz">Take me to quiz</a>
-	  <h1>Hello your File</h1>
 	  </body>
  	 </html>
   '; 
