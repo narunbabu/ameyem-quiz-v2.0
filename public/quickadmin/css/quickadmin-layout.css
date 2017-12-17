@@ -9,6 +9,7 @@
 
     .page-sidebar-wrapper {
         display: none;
+        
     }
 
     .page-quick-sidebar-wrapper {
@@ -1071,6 +1072,8 @@ Page sidebar
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover {
     /* Default sidebar menu */
     /* light sidebar menu */
+    background-color: rgb(134, 48, 48);
+    color:black;
 }
 
 .page-sidebar.navbar-collapse,

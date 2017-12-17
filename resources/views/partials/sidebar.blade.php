@@ -19,7 +19,7 @@
                     <span class="title">@lang('quickadmin.results.title')</span>
                 </a>
             </li>
-
+            @if(null !==Auth::user())
             @if(Auth::user()->isAdmin())
             <li class="{{ $request->segment(1) == 'topics' ? 'active' : '' }}">
                 <a href="{{ route('topics.index') }}">
@@ -72,6 +72,7 @@
                     </li>
                 </ul>
             </li>
+            @endif
             @endif
             <li>
                 <a href="#logout" onclick="$('#logout').submit();">

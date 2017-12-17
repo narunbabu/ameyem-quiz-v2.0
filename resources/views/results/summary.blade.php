@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="col-md-10">
 <h3 class="page-title">@lang('quickadmin.results.title')</h3>
 <h1>Welcome to summary</h1>

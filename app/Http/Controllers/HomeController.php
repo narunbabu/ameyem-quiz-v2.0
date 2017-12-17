@@ -34,23 +34,25 @@ class HomeController extends Controller
      */
     public function index(Authenticatable $user)
     {
-        $questions = Question::count();
-        $users = User::whereNull('role_id')->count();
+        
         // $current_user=$user['name'];
-        $topics=Topic::all();
+        // $topics=Topic::all();
         
             
-            $subjects = array();
+        //     $subjects = array();
 
-            foreach ($topics as $topic) {
+        //     foreach ($topics as $topic) {
                 
-                array_push ($subjects, $topic['subject']);
-            }
-            $subjects= array_unique($subjects);
-        // $subjects=$topics['subject'];
-        $quizzes = Test::count();
-        $average = Test::avg('result');
-        return view('home', compact('questions', 'users', 'quizzes', 'average','topics','subjects'));
+        //         array_push ($subjects, $topic['subject']);
+        //     }
+        //     $subjects= array_unique($subjects);
+        // // $subjects=$topics['subject'];
+        // $questions = Question::count();
+        // $users = User::whereNull('role_id')->count();
+        // $quizzes = Test::count();
+        // $average = Test::avg('result');
+        return view('home');
+        // return view('home', compact('questions', 'users', 'quizzes', 'average','topics','subjects'));
     }
 }
 

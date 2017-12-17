@@ -1,10 +1,36 @@
 @extends('layouts.auth')
 
 @section('content')
+<div class="row">
+
+@include('partials.header')
+
+</div>
+<div class="row" style="margin-top: 2%;">
+</div>
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+     <div class="panel panel-default">                      
+                
+            <div class="panel-body">
+            <h1>We recommend you to register before taking quiz to maintain records for your reference.</h1>
+            <h3><strong> But it is entirely upto you. Even without it you can take a quiz</strong></h3>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+
+            @include('partials.quizsummary')
+                </div>
+    <div class="row">
+
+        <div class="col-md-6"> 
+            @include('partials.quizselect')
+        </div>
+     <div class="col-md-6">
             <h1 class="text-center" style="color: white">Ameyem Quiz</h1>
-            <h3 class="text-center" style="color: white">How well do you know web and software knowledge?</h3>
+            <h3 class="text-center" style="color: white">We recommend you to register before taking quiz to maintain records</h3>
+            
             <br />
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
@@ -25,6 +51,27 @@
                           role="form"
                           method="POST"
                           action="{{ url('login') }}">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">login with:</label>
+                                <div class="col-md-6 col-md-offset-4">
+                                <a href="{{ route('oauth2google') }}"
+                                        class="btn btn-info">
+                                    Google
+                                </a>
+                                <a href="{{ route('oauth2facebook') }}"
+                                        class="btn btn-info">
+                                    Facebook
+                                </a>
+                                <a href="{{ route('oauth2github') }}"
+                                        class="btn btn-info">
+                                    GitHub
+                                </a>
+                                <br>
+                                Or
+                                <br>
+                            </div>
+                        </div>
+
                         <input type="hidden"
                                name="_token"
                                value="{{ csrf_token() }}">
@@ -71,22 +118,7 @@
                                 </a>
                                 <br>
                                 <a href="{{ route('auth.password.reset') }}">Forgot password</a>
-                                <br>
-                                <br>
-                                Or login with:
-                                <br>
-                                <a href="{{ route('oauth2google') }}"
-                                        class="btn btn-info">
-                                    Google
-                                </a>
-                                <a href="{{ route('oauth2facebook') }}"
-                                        class="btn btn-info">
-                                    Facebook
-                                </a>
-                                <a href="{{ route('oauth2github') }}"
-                                        class="btn btn-info">
-                                    GitHub
-                                </a>
+                                
                             </div>
                         </div>
                     </form>
