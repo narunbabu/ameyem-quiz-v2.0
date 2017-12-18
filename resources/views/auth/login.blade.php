@@ -23,14 +23,14 @@
             @include('partials.quizsummary')
                 </div>
     <div class="row">
-
-        <div class="col-md-6"> 
-            @include('partials.quizselect')
-        </div>
-     <div class="col-md-6">
-            <h1 class="text-center" style="color: white">Ameyem Quiz</h1>
+         <h1 class="text-center" style="color: white">Ameyem Quiz</h1>
             <h3 class="text-center" style="color: white">We recommend you to register before taking quiz to maintain records</h3>
             
+        <div class="text-center"  > 
+            @include('partials.quizselect-choice')
+        </div>
+     <div >
+           
             <br />
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
